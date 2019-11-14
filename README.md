@@ -1,8 +1,6 @@
 # CSV input, filter, csv output
 
-Hello!  👋 👋 👋
-
-My name is Abby Blachman, and I decided to complete this coding challenge using node.js. 
+Hello!  👋 👋 👋 Please reach out to me with any questions you might have about this code. 
 
 ### Instructions for use 📋
 
