@@ -6,7 +6,7 @@ const finalResults = [];
 const finalResultsTwo = [];
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const csvWriter = createCsvWriter({
-    path: './out.csv',
+    path: './democrats-age.csv',
     header: [
         {id: 'title', title: 'title'},
         {id: 'firstname', title: 'firstname'},
@@ -41,7 +41,7 @@ const csvWriter = createCsvWriter({
     ]
 });
 const csvWriterTwo = createCsvWriter({
-    path: './out-two.csv',
+    path: './republicans-social.csv',
     header: [
         {id: 'title', title: 'title'},
         {id: 'firstname', title: 'firstname'},
@@ -96,6 +96,10 @@ fs.createReadStream('legislators.csv')
       
 }
 filteredAge(democrats);
+csvWriter.writeRecords(finalResults)       
+    .then(() => {
+        console.log('Done');
+    })
 
 const republicans = results.filter(function(result) {
     return result.party = 'R';
@@ -110,5 +114,8 @@ const republicans = results.filter(function(result) {
     
 }
 filteredRepublicans(republicans);
-console.log(finalResultsTwo);
+csvWriterTwo.writeRecords(finalResultsTwo)       
+.then(() => {
+    console.log('Done Two');
+})
 });
