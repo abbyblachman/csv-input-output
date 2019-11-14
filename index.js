@@ -24,5 +24,9 @@ fs.createReadStream('legislators.csv')
       
 }
 filteredAge(democrats);
-console.log(finalResults);
+
+const republicans = results.filter(function(result) {
+    return result.party = 'R';
+  });
+  console.log(republicans);
 });
