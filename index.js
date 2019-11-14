@@ -3,6 +3,7 @@ const fs = require('fs');
 const moment = require('moment');
 const results = [];
 const finalResults = [];
+const finalResultsTwo = [];
 
 fs.createReadStream('legislators.csv')
   .pipe(csv())
@@ -28,5 +29,15 @@ filteredAge(democrats);
 const republicans = results.filter(function(result) {
     return result.party = 'R';
   });
-  console.log(republicans);
+  const filteredRepublicans = function(elements) {
+    elements.forEach(element => { 
+      if (element.twitter_id !== '' && element.youtube_url !== '') {
+      finalResultsTwo.push(element);
+      } else 
+      return; 
+    })
+    
+}
+filteredRepublicans(republicans);
+console.log(finalResultsTwo);
 });
