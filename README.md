@@ -10,9 +10,9 @@ In order to run this code, please make sure you have node installed.
 
 In order to install node, you can run `brew install node` or install it using your preferred package manager. 
 
-Once you have installed node, you can clone this repository. 
+Once you have installed node, you can clone into this repository by running `git clone <ssh/https link>` in your terminal. 
 
-When you have cloned, navigate to the  `datamade-code-challenge` directory. 
+When you have cloned into the repo, navigate to the `datamade-code-challenge` directory. 
 
 In your terminal, run: `node index.js`. 
 
