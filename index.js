@@ -10,4 +10,14 @@ fs.createReadStream('legislators.csv')
         return result.party = 'D';
       });
       console.log(democrats);
+      const filteredAge = function(elements) {
+        elements.forEach(element => {
+          var bday = element.birthdate;
+          var bdayDate = moment(bday).format("L"); 
+          if (moment(bdayDate).isBetween('1974-11-01', '2019-11-01', 'year') === true) {
+          finalResults.push(element);
+          } else 
+          return; 
+        })
+      }
   })
