@@ -4,6 +4,77 @@ const moment = require('moment');
 const results = [];
 const finalResults = [];
 const finalResultsTwo = [];
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+const csvWriter = createCsvWriter({
+    path: './out.csv',
+    header: [
+        {id: 'title', title: 'title'},
+        {id: 'firstname', title: 'firstname'},
+        {id: 'middlename', title: 'middlename'},
+        {id: 'lastname', title: 'lastname'},
+        {id: 'name_suffix', title: 'name_suffix'},
+        {id: 'nickname', title: 'nickname'},
+        {id: 'party', title: 'party'},
+        {id: 'state', title: 'state'},
+        {id: 'district', title: 'district'},
+        {id: 'in_office', title: 'in_office'},
+        {id: 'gender', title: 'gender'},
+        {id: 'phone', title: 'phone'},
+        {id: 'fax', title: 'fax'},
+        {id: 'website', title: 'website'},
+        {id: 'webform', title: 'webform'},
+        {id: 'congress_office', title: 'congress_office'},
+        {id: 'bioguide_id', title: 'bioguide_id'},
+        {id: 'votesmart_id', title: 'votesmart_id'},
+        {id: 'fec_id', title: 'fec_id'},
+        {id: 'govtrack_id', title: 'govtrack_id'},
+        {id: 'crp_id', title: 'crp_id'},
+        {id: 'twitter_id', title: 'twitter_id'},
+        {id: 'congresspedia_url', title: 'congresspedia_url'},
+        {id: 'youtube_url', title: 'youtube_url'},
+        {id: 'facebook_id', title: 'facebook_id'},
+        {id: 'official_rss', title: 'official_rss'},
+        {id: 'senate_class', title: 'senate_class'},
+        {id: 'birthdate', title: 'birthdate'},
+        {id: 'birthdate', title: 'birthdate'},
+        {id: 'oc_email', title: 'oc_email'}
+    ]
+});
+const csvWriterTwo = createCsvWriter({
+    path: './out-two.csv',
+    header: [
+        {id: 'title', title: 'title'},
+        {id: 'firstname', title: 'firstname'},
+        {id: 'middlename', title: 'middlename'},
+        {id: 'lastname', title: 'lastname'},
+        {id: 'name_suffix', title: 'name_suffix'},
+        {id: 'nickname', title: 'nickname'},
+        {id: 'party', title: 'party'},
+        {id: 'state', title: 'state'},
+        {id: 'district', title: 'district'},
+        {id: 'in_office', title: 'in_office'},
+        {id: 'gender', title: 'gender'},
+        {id: 'phone', title: 'phone'},
+        {id: 'fax', title: 'fax'},
+        {id: 'website', title: 'website'},
+        {id: 'webform', title: 'webform'},
+        {id: 'congress_office', title: 'congress_office'},
+        {id: 'bioguide_id', title: 'bioguide_id'},
+        {id: 'votesmart_id', title: 'votesmart_id'},
+        {id: 'fec_id', title: 'fec_id'},
+        {id: 'govtrack_id', title: 'govtrack_id'},
+        {id: 'crp_id', title: 'crp_id'},
+        {id: 'twitter_id', title: 'twitter_id'},
+        {id: 'congresspedia_url', title: 'congresspedia_url'},
+        {id: 'youtube_url', title: 'youtube_url'},
+        {id: 'facebook_id', title: 'facebook_id'},
+        {id: 'official_rss', title: 'official_rss'},
+        {id: 'senate_class', title: 'senate_class'},
+        {id: 'birthdate', title: 'birthdate'},
+        {id: 'birthdate', title: 'birthdate'},
+        {id: 'oc_email', title: 'oc_email'}
+    ]
+});
 
 fs.createReadStream('legislators.csv')
   .pipe(csv())
