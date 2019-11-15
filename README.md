@@ -25,7 +25,7 @@ I used several packages:
 - csv-writer: https://www.npmjs.com/package/csv-writer, used to write my filtered results to the output csv files. 
 - moment: https://www.npmjs.com/package/moment, used to work with dates so I could accurately filter by age.
 
-### Limitations 
+### Limitations ⚠️
 
 Two limitations I am identifying: 
 
