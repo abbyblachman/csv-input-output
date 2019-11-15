@@ -88,7 +88,7 @@ fs.createReadStream('legislators.csv')
       elements.forEach(element => {
         var bday = element.birthdate;
         var bdayDate = moment(bday).format("L"); 
-        if (moment(bdayDate).isBetween('1975-11-16', '2019-11-01', 'year') === true) {
+        if (moment(bdayDate).isBetween('1974-11-16', '2019-11-15', 'year') === true) {
         finalResults.push(element);
         } else 
         return; 
