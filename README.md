@@ -25,3 +25,10 @@ I used several packages:
 - csv-writer: https://www.npmjs.com/package/csv-writer, used to write my filtered results to the output csv files. 
 - moment: https://www.npmjs.com/package/moment, used to work with dates so I could accurately filter by age.
 
+### Limitations 
+
+Two limitations I am identifying: 
+
+- The headers for the output CSVs are currently hard-coded, which is something I would eventually like to change. 
+- The filter for Democrats under age 45 is hard-coded to be anyone born between November 16, 1974 and November 15, 2019. I would eventually like to change this to update as time goes on based on the current date. 
+
